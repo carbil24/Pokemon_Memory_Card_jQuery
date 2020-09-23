@@ -1,0 +1,467 @@
+/*-----Fonts------*/
+@font-face{
+	font-family:pokemon;
+	src: url("../fonts/pokemon_solid.ttf");
+}
+
+
+body {
+    font-family: 'Pokemon', cursive;
+	color:#e4241d;
+	background-image:url(../images/background.jpg);
+	background-repeat:no-repeat; 
+	background-position:center;
+	background-attachment:fixed;
+	background-position:25%;
+	background-size:cover;
+}
+
+#game_instructions{
+	font-family:pokemon;
+	color:#e4241d;
+	letter-spacing:3px;
+	list-style-type:none;
+
+}
+
+#game_instructions ul{
+	list-style-image:url(../images/pokeball_bullet.png);
+	list-style-position:outside;
+}
+
+#game_instructions h1{
+	font-family: 'Pokemon', sans-serif;
+	color:#3663ad;
+	text-shadow:2px 2px 5px #ffcb05
+}
+
+#game_instructions h2{
+	color:#ffcb05;
+	text-shadow:2px 2px 5px #3663ad
+}
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck{
+	width: 620px;
+	background-color:#ffcb05;
+	color:#3664ad;
+    padding: 20px;
+	border:10px solid #3664ad;
+    border-width: 5px;
+	border-radius:60px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+   
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+	background-image:url(../images/pokeball.png);
+	background-repeat:no-repeat; 
+	background-position:center;
+	background-color:#3664ad;
+    font-size: 0;
+    color: #ff00c8;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(54, 100, 173, 1);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #3664ad;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 50px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #3664ad;
+    font-size: 50px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+
+#i_start{
+	font-family:pokemon;
+	color:#3664ad;
+	font-size:25px;
+	padding:0 50px;
+	border:10px solid #3664ad;
+	background-color:#ffcb05;
+	border-radius:60px;
+	letter-spacing:5px;
+}
+ 
+#user{
+	font-family:pokemon;
+	color:#3664ad;
+	font-size:15px;
+	width:200px;
+	height:60px;
+	padding:0 20px;
+	border:10px solid #3664ad;
+	background-color:#ffcb05;
+	border-radius:60px;
+	letter-spacing:5px;
+}
+
+.level{
+	font-family:pokemon;
+	color:#3664ad;
+	font-size:15px;
+	width:200px;
+	height:60px;
+	padding:0 20px;
+	border:10px solid #3664ad;
+	background-color:#ffcb05;
+	border-radius:60px;
+	letter-spacing:5px;
+}
+
+.message{
+	font-family: 'Pokemon', sans-serif;
+	font-size:2em;
+	color:#3663ad;
+	text-shadow:2px 2px 5px #ffcb05
+}
+
+#i_restart{
+	font-family:pokemon;
+	color:#3664ad;
+	font-size:25px;
+	border:10px solid #3664ad;
+	background-color:#ffcb05;
+	border-radius:60px;
+	letter-spacing:5px;	 
+ }
+ 
+ 
+#i_endGame{
+	font-family:pokemon;
+	color:#3664ad;
+	font-size:25px;
+	border:10px solid #3664ad;
+	background-color:#ffcb05;
+	border-radius:60px;
+	letter-spacing:5px;	 
+ }
+
+.score_word{
+	font-family: 'Pokemon', sans-serif;
+	font-size:2em;
+	color:#3663ad;
+	text-shadow:2px 2px 5px #ffcb05
+}
+
+.score{
+    padding: 0;
+    display: inline-block;
+    margin: 0 5 0 0;
+	text-align: left;
+    width: 345px;
+}
+
+.score .pokeballs li {
+    list-style: none;
+	display: inline-block;
+
+}
+
+ul.pokeballs {
+	list-style-position:outside;
+	padding-inline-start: 0;
+}
+ 
+
+.moves{
+	font-size:2em;
+	color:#3663ad;
+}
+
+.time{
+	font-size:2em;
+	
+}
+
+.timer{
+	font-size:2em;
+}
+
+.seconds{
+	font-size:2em;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+	li{
+		font-size: 1.25rem;
+	}
+
+	label{
+		font-size: 1.25rem;
+	}
+
+	.container{
+		padding-top: 80px;
+		max-width: 1400px;
+	}
+
+	.startDiv{
+		margin-top: 60px;
+	}
+
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) and (min-width: 340px){
+
+	h1{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	
+	h2{
+		font-size: 1rem;
+
+	}
+
+	li{
+		font-size: .75rem;
+	}
+
+	label{
+		font-size: .75rem;
+	}
+
+	#i_start{
+		font-size:15px;
+	}
+	 
+	#user{
+		font-size:10px;
+		width:150px;
+		height:45px;
+	}
+	
+	.level{
+		font-size:10px;
+		width:150px;
+		height:45px;
+	}
+
+	.startDiv{
+		margin-top: 30px;
+	}
+
+
+	.deck{
+		padding: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 0 2em;
+	   
+	}
+	
+	.deck .card {
+		height: 65px;
+		width: 65px;
+		background-image:url(../images/pokeball2.png);
+		background-repeat:no-repeat; 
+		background-position:center;
+		background-color:#3664ad;
+		font-size: 0;
+		color: #ff00c8;
+		border-radius: 8px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 5px 2px 20px 0 rgba(54, 100, 173, 1);
+	}	
+		
+	.score_word{
+		font-size:1.5em;
+	}
+
+	.score{
+		width: 155px;
+	}
+
+	.moves{
+		font-size:1em;
+	}
+
+	.time{
+		font-size:1em;
+	}
+
+	.timer{
+		font-size:1em;
+	}
+
+	.seconds{
+		font-size:1em;
+	}
+	
+	.message{
+		font-size:1em;
+	}
+	
+	#i_restart{
+		font-size:15px;
+	 }
+	 
+	 
+	#i_endGame{
+		font-size:15px;
+	 }
+
+	 .score .pokeballs li {
+		 width: 20px;
+		 height: 20px;
+	}
+
+	#game_instructions ul{
+		list-style-image:url(../images/pokeball_bullet2.png);
+	}
+  }
+
+
+
+  @media screen and (max-width: 339px){
+
+	.deck .card {
+		height: 52px;
+		width: 52px;
+		background-image:url(../images/pokeball3.png);
+		background-repeat:no-repeat; 
+		background-position:center;
+		background-color:#3664ad;
+		font-size: 0;
+		color: #ff00c8;
+		border-radius: 8px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		box-shadow: 5px 2px 20px 0 rgba(54, 100, 173, 1);
+	}	
+		
+	h1{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	
+	h2{
+		font-size: 1rem;
+
+	}
+
+	li{
+		font-size: .75rem;
+	}
+
+	label{
+		font-size: .75rem;
+	}
+
+	#i_start{
+		font-size:15px;
+	}
+	 
+	#user{
+		font-size:10px;
+		width:150px;
+		height:45px;
+	}
+	
+	.level{
+		font-size:10px;
+		width:150px;
+		height:45px;
+	}
+
+	.startDiv{
+		margin-top: 30px;
+	}
+
+
+	.deck{
+		padding: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 0 2em;
+	   
+	}
+		
+	.score_word{
+		font-size:1.5em;
+	}
+
+	.score{
+		width: 155px;
+	}
+
+	.moves{
+		font-size:1em;
+	}
+
+	.time{
+		font-size:1em;
+	}
+
+	.timer{
+		font-size:1em;
+	}
+
+	.seconds{
+		font-size:1em;
+	}
+	
+	.message{
+		font-size:1em;
+	}
+	
+	#i_restart{
+		font-size:15px;
+	 }
+	 
+	 
+	#i_endGame{
+		font-size:15px;
+	 }
+
+	 .score .pokeballs li {
+		 width: 20px;
+		 height: 20px;
+	}
+
+	#game_instructions ul{
+		list-style-image:url(../images/pokeball_bullet2.png);
+	}
+  }

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pokemon Hunter</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="style/style.css">
+	</head>
+
+	<body>
+		<div class="container">
+
+				<div id="game_instructions" class="col-11 col-sm-11 col-lg-8 m-3">
+
+					<div class="row mb-3">
+						<h1>Welcome to Pokemon Hunter</h1>
+					</div>	
+					<div class="row">
+						<h2>Game Instructions:</h2>
+						<ul class="mt-2">
+							<li class="mb-2">You start the game with 5 pokeballs.</li>
+							<li class="mb-2">You have 60 seconds to catch them all.</li>
+							<li class="mb-2">After some quantity of moves or after passing some amount of time, you will lose pokeballs. So try to use less moves and hurry up!!!</li>
+							<li class="mb-2">You need at least 3 pokeballs to win the level.</li>
+							<li class="mb-2">Press the Start button to begin.</li>
+							<li class="mb-2">Gotta catch 'em all!!! Good Luck!!!</li>
+						</ul>
+					</div>	
+
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-6 d-flex">
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<label class="user_name">Your name: </label>
+							</div>
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<input id="user" type="text" name="user"/>
+							</div>
+						</div>
+
+						<div class="col-12 col-lg-6 d-flex">
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<label> Level: </label>
+							</div>
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<select class="level">
+									<option value="" disabled selected>--Select--</option>
+									<option value="easy">Easy</option>
+									<option value="medium">Medium</option>
+									<option value="hard">Hard</option>
+								</select>
+							</div>
+						</div>
+					</div>	
+					
+					<div class="row d-flex justify-content-center startDiv">	
+						<input id="i_start" class="start" type="button" onclick="begin();" value="Start!" />
+					</div>
+				</div>	
+
+				<div id="game" class="col-12 col-sm-12 col-lg-8 ">
+					<div class="row">
+						<div class="col-4 col-lg-4 p-0">
+							<span class="moves"></span>
+						</div>
+
+						<div class="col-4 col-lg-4 d-flex justify-content-center p-0">
+							<div class="row d-flex justify-content-center">
+								<div class="col-6 col-lg-12 d-flex justify-content-center">
+									<div class="score_word">Score:</div>
+								</div>
+								<div class="col-12 col-lg-12 score d-flex justify-content-center">
+									<ul class="pokeballs">
+										<li>
+											<img id="pokeball_1" src="images/pokeball_bullet.png" alt="logo" class="img-fluid">
+										</li>
+										<li>
+											<img id="pokeball_2" src="images/pokeball_bullet.png" alt="logo" class="img-fluid">
+										</li>
+										<li>
+											<img id="pokeball_3" src="images/pokeball_bullet.png" alt="logo" class="img-fluid">
+										</li>
+										<li>
+											<img id="pokeball_4" src="images/pokeball_bullet.png" alt="logo" class="img-fluid">
+										</li>
+										<li>
+											<img id="pokeball_5" src="images/pokeball_bullet.png" alt="logo" class="img-fluid">
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>					
+
+						<div class="col-4 col-lg-4 d-flex justify-content-end p-0">
+							<span class="time"></span>
+						</div>
+					</div>	
+
+					<div class="row d-flex justify-content-center mb-3">	
+						<span class="message"></span> 
+					</div>
+
+					
+					<div class="row">
+						<div class="col-12 col-lg-12 d-flex justify-content-center">
+							<ul class="deck"></ul>
+						</div>
+					</div>
+
+					<div class="row justify-content-center">
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<input id="i_restart" class="restart" type="button" onclick="begin();" value="Restart" />
+							</div>
+
+							<div class="col-6 col-lg-6 d-flex justify-content-center mt-3">
+								<input id="i_endGame" class="end_game" type="button" onclick="begin();" value="End Game" />
+							</div>
+					</div>
+					
+				</div>
+			</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+		<script src="js/javascript.js"></script>
+	</body>
+
+</html>
